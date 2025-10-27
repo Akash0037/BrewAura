@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu - BrewAura</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="index.html">BrewAura</a>
+        </div>
+        <div class="nav-menu" id="nav-menu">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="menu.html" class="nav-link active">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a href="order.html" class="nav-link">Order</a>
+            </li>
+            <li class="nav-item cart-icon">
+              <a href="cart.html" class="nav-link">
+                <span>Cart</span>
+                <div class="cart-count" id="cart-count">0</div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="menuBar" id="menuBar">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Menu Section -->
+    <section class="menu-section">
+      <div class="container">
+        <h2 class="section-title">Our Menu</h2>
+
+        <div class="menu-filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="coffee">Coffee</button>
+          <button class="filter-btn" data-filter="snacks">Snacks</button>
+        </div>
+
+        <div class="menu-grid" id="menu-grid">
+          <!-- Coffee Items -->
+          <div class="menu-item" data-id="espresso" data-category="coffee">
+            <div class="menu-item-image">
+              <img src="../assets/espresso.jpeg" alt="Espresso" />
+            </div>
+            <div class="menu-item-content">
+              <div class="menu-item-title">
+                <h3>Espresso</h3>
+                <div class="menu-item-price">₹180</div>
+              </div>
+              <p>Rich, concentrated coffee with a creamy crema top.</p>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="menu-item" data-id="cappuccino" data-category="coffee">
+            <div class="menu-item-image">
+              <img src="../assets/Cappuccino.jpeg" alt="Cappuccino" />
+            </div>
+            <div class="menu-item-content">
+              <div class="menu-item-title">
+                <h3>Cappuccino</h3>
+                <div class="menu-item-price">₹240</div>
+              </div>
+              <p>Equal parts espresso, steamed milk, and foam.</p>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="menu-item" data-id="latte" data-category="coffee">
+            <div class="menu-item-image">
+              <img src="../assets/latte.jpg" alt="Latte" />
+            </div>
+            <div class="menu-item-content">
+              <div class="menu-item-title">
+                <h3>Latte</h3>
+                <div class="menu-item-price"> ₹260</div>
+              </div>
+              <p>Espresso with steamed milk and a light layer of foam.</p>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="menu-item" data-id="americano" data-category="coffee">
+            <div class="menu-item-image">
+              <img src="../assets/americano.jpeg" alt="Americano" />
+            </div>
+            <div class="menu-item-content">
+              <div class="menu-item-title">
+                <h3>Americano</h3>
+                <div class="menu-item-price">₹200</div>
+              </div>
+              <p>Espresso shots topped with hot water.</p>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="menu-item" data-id="mocha" data-category="coffee">
+            <div class="menu-item-image">
+              <img src="../assets/mocha.jpg" alt="Mocha" />
+            </div>
+            <div class="menu-item-content">
+              <div class="menu-item-title">
+                <h3>Mocha</h3>
+                <div class="menu-item-price">₹290</div>
+              </div>
+              <p>Espresso with chocolate and steamed milk.</p>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="menu-item" data-id="macchiato" data-category="coffee">
+            <div class="menu-item-image">
+              <img src="../assets/macchiato.jpg" alt="Macchiato" />
+            </div>
+            <div class="menu-item-content">
+              <div class="menu-item-title">
+                <h3>Macchiato</h3>
+                <div class="menu-item-price">₹220</div>
+              </div>
+              <p>Espresso with a dollop of foam.</p>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="menu-item" data-id="cold-brew" data-category="coffee">
+            <div class="menu-item-image">
+              <img src="../assets/cold-brew.jpeg" alt="Cold Brew" />
+            </div>
+            <div class="menu-item-content">
+              <div class="menu-item-title">
+                <h3>Cold Brew</h3>
+                <div class="menu-item-price">₹250</div>
+              </div>
+              <p>Slow-steeped for 18 hours for a smooth taste.</p>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="menu-item" data-id="flat-white" data-category="coffee">
+            <div class="menu-item-image">
+              <img src="../assets/flat-white.jpg" alt="Flat White" />
+            </div>
+            <div class="menu-item-content">
+              <div class="menu-item-title">
+                <h3>Flat White</h3>
+                <div class="menu-item-price">₹260</div>
+              </div>
+              <p>Espresso with microfoam for a velvety texture.</p>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- Snack Items -->
+          <div class="menu-item" data-id="croissant" data-category="snacks">
+            <div class="menu-item-image">
+              <img src="../assets/croissant.jpg" alt="Croissant" />
+            </div>
+            <div class="menu-item-content">
+              <div class="menu-item-title">
+                <h3>Butter Croissant</h3>
+                <div class="menu-item-price">₹190</div>
+              </div>
+              <p>Flaky, buttery perfection baked fresh daily.</p>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="menu-item" data-id="muffin" data-category="snacks">
+            <div class="menu-item-image">
+              <img src="../assets/muffin.jpg" alt="Muffin" />
+            </div>
+            <div class="menu-item-content">
+              <div class="menu-item-title">
+                <h3>Blueberry Muffin</h3>
+                <div class="menu-item-price">₹180</div>
+              </div>
+              <p>Moist muffin packed with fresh blueberries.</p>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="menu-item" data-id="donut" data-category="snacks">
+            <div class="menu-item-image">
+              <img src="../assets/donut.jpg" alt="Donut" />
+            </div>
+            <div class="menu-item-content">
+              <div class="menu-item-title">
+                <h3>Glazed Donut</h3>
+                <div class="menu-item-price">₹150</div>
+              </div>
+              <p>Soft, fluffy donut with sweet glaze.</p>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="menu-item" data-id="sandwich" data-category="snacks">
+            <div class="menu-item-image">
+              <img src="\../assets/sandwich.jpg" alt="Sandwich" />
+            </div>
+            <div class="menu-item-content">
+              <div class="menu-item-title">
+                <h3>Breakfast Sandwich</h3>
+                <div class="menu-item-price">₹350</div>
+              </div>
+              <p>
+                Egg, cheese, and your choice of bacon or sausage on a croissant.
+              </p>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="menu-item" data-id="cookie" data-category="snacks">
+            <div class="menu-item-image">
+              <img src="../assets/cookie.jpg" alt="Cookie" />
+            </div>
+            <div class="menu-item-content">
+              <div class="menu-item-title">
+                <h3>Chocolate Chip Cookie</h3>
+                <div class="menu-item-price">₹150</div>
+              </div>
+              <p>Warm, chewy cookie with melty chocolate chips.</p>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="menu-item" data-id="brownie" data-category="snacks">
+            <div class="menu-item-image">
+              <img src="../assets/brownie.jpg" alt="Brownie" />
+            </div>
+            <div class="menu-item-content">
+              <div class="menu-item-title">
+                <h3>Fudge Brownie</h3>
+                <div class="menu-item-price">₹150</div>
+              </div>
+              <p>Rich, fudgy brownie with chocolate chunks.</p>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>BrewAura</h3>
+            <p>Where Aroma Meets Soul</p>
+          </div>
+          <div class="footer-section">
+            <h4>Hours</h4>
+            <p>Monday - Friday: 7am - 8pm</p>
+            <p>Saturday - Sunday: 8am - 9pm</p>
+          </div>
+          <div class="footer-section">
+            <h4>Contact</h4>
+            <p>123 Coffee Street</p>
+            <p>Brewville, BR 12345</p>
+            <p>(555) 123-4567</p>
+          </div>
+          <div class="footer-section">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+              <a href="#" class="social-link">Instagram</a>
+              <a href="#" class="social-link">Facebook</a>
+              <a href="#" class="social-link">Twitter</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 BrewAura. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/javascript/main.js"></script>
+    <script src="/javascript/cart.js"></script>
+  </body>
+</html>

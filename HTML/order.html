@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order - BrewAura</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="index.html">BrewAura</a>
+        </div>
+        <div class="nav-menu" id="nav-menu">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="menu.html" class="nav-link">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a href="order.html" class="nav-link active">Order</a>
+            </li>
+            <li class="nav-item cart-icon">
+              <a href="cart.html" class="nav-link">
+                <span>Cart</span>
+                <div class="cart-count" id="cart-count">0</div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="menuBar" id="menuBar">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Order Section -->
+    <section class="order-section">
+      <div class="container">
+        <h2 class="section-title">Place Your Order</h2>
+
+        <div class="order-container">
+          <div class="order-form-container">
+            <form class="order-form" id="order-form">
+              <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" required />
+              </div>
+
+              <div class="form-group">
+                <label>Delivery Option *</label>
+                <div class="delivery-options">
+                  <div class="delivery-option selected">
+                    <input
+                      type="radio"
+                      id="takeaway"
+                      name="delivery"
+                      value="takeaway"
+                      checked
+                    />
+                    <label for="takeaway">Takeaway</label>
+                  </div>
+                  <div class="delivery-option">
+                    <input
+                      type="radio"
+                      id="delivery"
+                      name="delivery"
+                      value="delivery"
+                    />
+                    <label for="delivery">Home Delivery</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group" id="address-field" style="display: none">
+                <label for="address">Delivery Address *</label>
+                <textarea id="address" name="address" rows="3"></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="notes">Special Instructions</label>
+                <textarea
+                  id="notes"
+                  name="notes"
+                  rows="3"
+                  placeholder="Any special requests or dietary restrictions..."
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn-primary">Place Order</button>
+            </form>
+          </div>
+
+          <div class="order-summary">
+            <h3>Order Summary</h3>
+            <div id="order-summary-items">
+              <!-- Order items will be dynamically inserted here -->
+            </div>
+            <div class="summary-total">
+              <span>Total</span>
+              <span id="order-total">$0.00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>BrewAura</h3>
+            <p>Where Aroma Meets Soul</p>
+          </div>
+          <div class="footer-section">
+            <h4>Hours</h4>
+            <p>Monday - Friday: 7am - 8pm</p>
+            <p>Saturday - Sunday: 8am - 9pm</p>
+          </div>
+          <div class="footer-section">
+            <h4>Contact</h4>
+            <p>123 Coffee Street</p>
+            <p>Brewville, BR 12345</p>
+            <p>(555) 123-4567</p>
+          </div>
+          <div class="footer-section">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+              <a href="#" class="social-link">Instagram</a>
+              <a href="#" class="social-link">Facebook</a>
+              <a href="#" class="social-link">Twitter</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 BrewAura. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/javascript/main.js"></script>
+    <script src="/javascript/cart.js"></script>
+    <script src="/javascript/order.js"></script>
+  </body>
+</html>

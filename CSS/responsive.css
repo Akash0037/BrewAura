@@ -1,0 +1,555 @@
+/* Responsive Styles for BrewAura */
+@media screen and (max-width: 1200px) {
+    .container {
+        max-width: 1000px;
+    }
+    
+    .hero-container {
+        max-width: 1000px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        max-width: 900px;
+        padding: 0 30px;
+    }
+    
+    .hero-container {
+        max-width: 900px;
+        gap: 2rem;
+    }
+    
+    .hero-title {
+        font-size: 3.5rem;
+    }
+    
+    .featured-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .menu-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    /* Mobile Navigation */
+    .menuBar {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 80%;
+        height: calc(100vh - 70px);
+        background-color: var(--cream-white);
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 3rem;
+        transition: var(--transition);
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-menu.active {
+        right: 0;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        gap: 2rem;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-link {
+        font-size: 1.1rem;
+        padding: 10px 0;
+    }
+    
+    /* Hero Section */
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 3rem;
+        padding: 0 20px;
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.3rem;
+    }
+    
+    /* Featured Section */
+    .featured-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .featured-item {
+        padding: 1.5rem;
+    }
+    
+    /* Menu Section */
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .menu-filters {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    
+    .filter-btn {
+        padding: 6px 16px;
+        font-size: 0.9rem;
+    }
+    
+    /* Order Section */
+    .order-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    /* Cart Section */
+    .cart-item {
+        grid-template-columns: 80px 1fr auto;
+        grid-template-areas: 
+            "image details details"
+            "image quantity actions";
+        gap: 1rem;
+        padding: 1rem 0;
+        position: relative;
+    }
+    
+    .cart-item-image {
+        grid-area: image;
+        width: 70px;
+        height: 70px;
+    }
+    
+    .cart-item-details {
+        grid-area: details;
+    }
+    
+    .cart-item-quantity {
+        grid-area: quantity;
+        justify-content: flex-start;
+    }
+    
+    .cart-item-total {
+        grid-area: actions;
+        text-align: right;
+        font-size: 1.1rem;
+    }
+    
+    .remove-item {
+        position: absolute;
+        top: 10px;
+        right: 0;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Testimonials */
+    .testimonial-carousel {
+        height: 220px;
+    }
+    
+    .testimonial p {
+        font-size: 1.1rem;
+    }
+    
+    /* Section Titles */
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    /* Footer */
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    
+    /* About Page */
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .team-member {
+        padding: 1.5rem;
+    }
+    
+    /* Coffee Cup Animation Adjustments */
+    .coffee-cup {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .cup {
+        width: 140px;
+        height: 110px;
+    }
+    
+    .cup::before {
+        width: 140px;
+        height: 35px;
+    }
+    
+    .cup::after {
+        top: -15px;
+        right: -25px;
+        width: 50px;
+        height: 60px;
+        border-width: 12px;
+    }
+    
+    .steam {
+        top: -70px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    /* Hero Section */
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    /* Menu Section */
+    .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .menu-item {
+        margin-bottom: 0;
+    }
+    
+    /* Cart Section */
+    .cart-items {
+        padding: 1.5rem;
+    }
+    
+    .cart-summary {
+        padding: 1.5rem;
+    }
+    
+    .cart-item {
+        grid-template-columns: 60px 1fr;
+        grid-template-areas: 
+            "image details"
+            "quantity quantity"
+            "actions actions";
+        gap: 0.8rem;
+    }
+    
+    .cart-item-image {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .cart-item-quantity {
+        grid-area: quantity;
+        justify-content: center;
+        margin: 0.5rem 0;
+    }
+    
+    .cart-item-total {
+        grid-area: actions;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+    
+    /* Order Form */
+    .order-form {
+        padding: 1.5rem;
+    }
+    
+    .delivery-options {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .delivery-option {
+        padding: 0.8rem;
+    }
+    
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    /* Testimonials */
+    .testimonial-carousel {
+        height: 250px;
+    }
+    
+    .testimonial {
+        padding: 0 1rem;
+    }
+    
+    .testimonial p {
+        font-size: 1rem;
+    }
+    
+    /* About Page */
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .team-member-image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    /* Modal */
+    .modal-content {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+    
+    .modal-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    /* Navigation */
+    .nav-container {
+        padding: 0 15px;
+    }
+    
+    .nav-logo a {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .btn-primary {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    /* Coffee Cup Animation - Small Screens */
+    .coffee-cup {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .cup {
+        width: 120px;
+        height: 100px;
+    }
+    
+    .cup::before {
+        width: 120px;
+        height: 30px;
+    }
+    
+    .cup::after {
+        top: -10px;
+        right: -20px;
+        width: 40px;
+        height: 50px;
+        border-width: 10px;
+    }
+    
+    .steam {
+        top: -60px;
+    }
+    
+    .steam span {
+        width: 6px;
+        height: 50px;
+    }
+    
+    /* Menu Items */
+    .menu-item-content {
+        padding: 1rem;
+    }
+    
+    .menu-item-title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .menu-item-price {
+        font-size: 1.1rem;
+    }
+    
+    /* Cart */
+    .cart-items {
+        padding: 1rem;
+    }
+    
+    .cart-summary {
+        padding: 1rem;
+    }
+    
+    /* Forms */
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 10px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .footer,
+    .btn-primary,
+    .add-to-cart,
+    .filter-btn,
+    .menuBar {
+        display: none !important;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+        font-size: 12pt;
+    }
+    
+    .container {
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+    
+    .hero,
+    .featured,
+    .menu-section,
+    .cart-section,
+    .order-section,
+    .about-section {
+        padding: 1rem 0 !important;
+        page-break-inside: avoid;
+    }
+    
+    a {
+        color: black !important;
+        text-decoration: underline;
+    }
+}
+
+/* High DPI Screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .featured-image img,
+    .menu-item-image img,
+    .team-member-image img,
+    .cart-item-image img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .steam span {
+        animation: none !important;
+        opacity: 0;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    /* This ensures our light theme remains consistent */
+    /* while respecting user preferences where appropriate */
+    .modal-content {
+        background-color: var(--cream-white);
+        color: var(--text-dark);
+    }
+}
+
+/* Landscape Mobile */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        min-height: 120vh;
+        padding-top: 70px;
+    }
+    
+    .nav-menu {
+        height: calc(100vh - 70px);
+        overflow-y: auto;
+    }
+    
+    .testimonial-carousel {
+        height: 150px;
+    }
+}
+
+/* Very Large Screens */
+@media screen and (min-width: 1600px) {
+    .container {
+        max-width: 1400px;
+    }
+    
+    .hero-container {
+        max-width: 1400px;
+    }
+    
+    .hero-title {
+        font-size: 5rem;
+    }
+    
+    .menu-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
