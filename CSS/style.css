@@ -16,6 +16,7 @@
     box-sizing: border-box;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
@@ -25,6 +26,11 @@ body {
     color: var(--text-dark);
     background-color: var(--cream-white);
     line-height: 1.6;
+}
+
+body::selection {
+    background-color: #6F4E37; /* Your current - slightly lighter brown */
+    color: #FFF8E7; /* Cream white for better contrast */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -218,6 +224,7 @@ ul {
     width: 200px;
     height: 200px;
     margin: 0 auto;
+    margin-top: 80 px;
 }
 
 .cup {
@@ -948,4 +955,22 @@ ul {
 
 .btn-secondary:hover {
     background-color: #c8b7b0;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cream-white);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--coffee-brown);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--coffee-brown);
 }
