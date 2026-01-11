@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - BrewAura</title>
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍵</text></svg>"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <link rel="stylesheet" href="../CSS/responsive.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="index.html">BrewAura</a>
+        </div>
+        <div class="nav-menu" id="nav-menu">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="menu.html" class="nav-link">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a href="order.html" class="nav-link">Order</a>
+            </li>
+            <li class="nav-item cart-icon">
+              <a href="cart.html" class="nav-link">
+                <span>Cart</span>
+                <div class="cart-count" id="cart-count">0</div>
+              </a>
+            </li>
+            <li class="nav-item user-profile">
+              <a href="login.html" class="nav-link">
+                <span id="user-name">Login</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="menuBar" id="menuBar">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Login Section -->
+    <section class="auth-section">
+      <div class="container">
+        <div class="auth-container">
+          <div class="auth-tabs">
+            <button class="auth-tab active" data-tab="login">Login</button>
+            <button class="auth-tab" data-tab="signup">Sign Up</button>
+          </div>
+
+          <!-- Login Form -->
+          <form class="auth-form active" id="login-form">
+            <h2>Welcome Back</h2>
+            <p>Sign in to your account</p>
+
+            <div class="form-group">
+              <label for="login-email">Email Address *</label>
+              <input
+                type="email"
+                id="login-email"
+                name="email"
+                required
+                placeholder="Enter your email"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="login-password">Password *</label>
+              <input
+                type="password"
+                id="login-password"
+                name="password"
+                required
+                placeholder="Enter your password"
+              />
+            </div>
+
+            <div class="form-options">
+              <label class="checkbox">
+                <input type="checkbox" name="remember" />
+                <span>Remember me</span>
+              </label>
+              <a href="#" class="forgot-password">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="btn-primary">Sign In</button>
+
+            <div class="auth-divider">
+              <span>or</span>
+            </div>
+
+            <button type="button" class="btn-secondary" id="guest-login">
+              Continue as Guest
+            </button>
+          </form>
+
+          <!-- Signup Form -->
+          <form class="auth-form" id="signup-form">
+            <h2>Create Account</h2>
+            <p>Join BrewAura community</p>
+
+            <div class="form-group">
+              <label for="signup-name">Full Name *</label>
+              <input
+                type="text"
+                id="signup-name"
+                name="name"
+                required
+                placeholder="Enter your full name"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="signup-email">Email Address *</label>
+              <input
+                type="email"
+                id="signup-email"
+                name="email"
+                required
+                placeholder="Enter your email"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="signup-password">Password *</label>
+              <input
+                type="password"
+                id="signup-password"
+                name="password"
+                required
+                placeholder="Create a password"
+              />
+              <small class="password-hint">Must be at least 6 characters</small>
+            </div>
+
+            <div class="form-group">
+              <label for="signup-confirm">Confirm Password *</label>
+              <input
+                type="password"
+                id="signup-confirm"
+                name="confirm-password"
+                required
+                placeholder="Confirm your password"
+              />
+            </div>
+
+            <div class="form-options">
+              <label class="checkbox">
+                <input type="checkbox" name="terms" required />
+                <span>I agree to the <a href="#">Terms & Conditions</a></span>
+              </label>
+            </div>
+
+            <button type="submit" class="btn-primary">Create Account</button>
+
+            <p class="auth-switch">
+              Already have an account?
+              <a href="#" class="switch-to-login">Sign In</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>BrewAura</h3>
+            <p>Where Aroma Meets Soul</p>
+          </div>
+          <div class="footer-section">
+            <h4>Hours</h4>
+            <p>Monday - Friday: 7am - 8pm</p>
+            <p>Saturday - Sunday: 8am - 9pm</p>
+          </div>
+          <div class="footer-section">
+            <h4>Contact</h4>
+            <p>123 Coffee Street</p>
+            <p>Brewville, BR 12345</p>
+            <p>(555) 123-4567</p>
+          </div>
+          <div class="footer-section">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+              <a href="#" class="social-link">Instagram</a>
+              <a href="#" class="social-link">Facebook</a>
+              <a href="#" class="social-link">Twitter</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 BrewAura. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../javascript/main.js"></script>
+    <script src="../javascript/auth.js"></script>
+  </body>
+</html>
